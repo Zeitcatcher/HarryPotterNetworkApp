@@ -1,5 +1,5 @@
 //
-//  MainCollectionViewController.swift
+//  ListCollectionViewController.swift
 //  HarryPotterNetworkApp
 //
 //  Created by Arseniy Oksenoyt on 8/31/23.
@@ -7,9 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
-class MainCollectionViewController: UICollectionViewController {
+class ListCollectionViewController: UICollectionViewController {
     
     var characters: [Character] = []
     
@@ -36,10 +34,22 @@ class MainCollectionViewController: UICollectionViewController {
         cell.configure(with: character)
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let character = characters[indexPath.item]
+        performSegue(withIdentifier: "detailsSegue", sender: character)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailsViewController = segue.destination as? DetailsViewController else { return }
+        guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
+        
+        detailsViewController.character = characters[indexPath.item]
+    }
 }
 
 // MARK: - Private methods
-extension MainCollectionViewController {
+extension ListCollectionViewController {
     private func fetchCharacters() {
         NetworkManager.shared.fetch([Character].self, from: NetworkManager.shared.link) { [weak self] result in
             switch result {
@@ -55,7 +65,7 @@ extension MainCollectionViewController {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension ListCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 48, height: 200)
     }

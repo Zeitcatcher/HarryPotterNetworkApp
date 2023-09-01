@@ -12,10 +12,11 @@
 		D9F09ADC2AA171BC008C0139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F09ADA2AA171BC008C0139 /* Main.storyboard */; };
 		D9F09ADE2AA171BC008C0139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F09ADD2AA171BC008C0139 /* Assets.xcassets */; };
 		D9F09AE12AA171BC008C0139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F09ADF2AA171BC008C0139 /* LaunchScreen.storyboard */; };
-		D9F09AED2AA173DE008C0139 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F09AEC2AA173DE008C0139 /* MainCollectionViewController.swift */; };
+		D9F09AED2AA173DE008C0139 /* ListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F09AEC2AA173DE008C0139 /* ListCollectionViewController.swift */; };
 		D9F09AEF2AA17483008C0139 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F09AEE2AA17483008C0139 /* MainCollectionViewCell.swift */; };
 		D9F09AF12AA17638008C0139 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F09AF02AA17638008C0139 /* Character.swift */; };
 		D9F09AF72AA17799008C0139 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F09AF62AA17799008C0139 /* NetworkManager.swift */; };
+		D9F09AFA2AA286CF008C0139 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F09AF92AA286CF008C0139 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +27,11 @@
 		D9F09ADD2AA171BC008C0139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F09AE02AA171BC008C0139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9F09AE22AA171BC008C0139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9F09AEC2AA173DE008C0139 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		D9F09AEC2AA173DE008C0139 /* ListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewController.swift; sourceTree = "<group>"; };
 		D9F09AEE2AA17483008C0139 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9F09AF02AA17638008C0139 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D9F09AF62AA17799008C0139 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D9F09AF92AA286CF008C0139 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,8 @@
 		D9F09AE92AA171ED008C0139 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D9F09AEC2AA173DE008C0139 /* MainCollectionViewController.swift */,
+				D9F09AEC2AA173DE008C0139 /* ListCollectionViewController.swift */,
+				D9F09AF92AA286CF008C0139 /* DetailsViewController.swift */,
 				D9F09AEE2AA17483008C0139 /* MainCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
@@ -196,9 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F09AF72AA17799008C0139 /* NetworkManager.swift in Sources */,
-				D9F09AED2AA173DE008C0139 /* MainCollectionViewController.swift in Sources */,
+				D9F09AED2AA173DE008C0139 /* ListCollectionViewController.swift in Sources */,
 				D9F09AD52AA171BC008C0139 /* AppDelegate.swift in Sources */,
 				D9F09AF12AA17638008C0139 /* Character.swift in Sources */,
+				D9F09AFA2AA286CF008C0139 /* DetailsViewController.swift in Sources */,
 				D9F09AD72AA171BC008C0139 /* SceneDelegate.swift in Sources */,
 				D9F09AEF2AA17483008C0139 /* MainCollectionViewCell.swift in Sources */,
 			);

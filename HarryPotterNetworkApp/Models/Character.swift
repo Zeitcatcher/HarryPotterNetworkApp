@@ -9,7 +9,7 @@ struct Character: Decodable {
     let name: String
     let otherNames: String?
     let house: String?
-    let yearOfBirth: Double?
+    let yearOfBirth: Int?
     let wand: Wand?
     let patronus: String?
     let alive: Bool?
