@@ -10,13 +10,13 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MainCollectionViewController: UICollectionViewController {
-
+    
     var characters: [Character] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCharacters()
-
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,7 +32,9 @@ class MainCollectionViewController: UICollectionViewController {
         else {
             return UICollectionViewCell()
         }
-       return cell
+        let character = characters[indexPath.item]
+        cell.configure(with: character)
+        return cell
     }
 }
 
