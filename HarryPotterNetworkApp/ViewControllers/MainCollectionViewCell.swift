@@ -9,4 +9,5 @@ import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var characterCellTitles: [UILabel]!
 }

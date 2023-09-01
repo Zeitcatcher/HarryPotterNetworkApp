@@ -11,32 +11,43 @@ private let reuseIdentifier = "Cell"
 
 class MainCollectionViewController: UICollectionViewController {
 
+    var characters: [Character] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        fetchCharacters()
 
     }
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        characters.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
+        guard
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: "characterCell",
+                for: indexPath
+            ) as? MainCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
+       return cell
     }
+}
 
+//MARK: Private methods
+extension MainCollectionViewController {
+    private func fetchCharacters() {
+        NetworkManager.shared.fetch([Character].self, from: NetworkManager.shared.link) { [weak self] result in
+            switch result {
+            case .success(let characters):
+                self?.characters = characters
+                self?.collectionView.reloadData()
+                print(characters)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

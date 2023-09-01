@@ -7,36 +7,47 @@
 
 struct Character: Decodable {
     let name: String
-    let alternate_names: String
-    let house: String
-    let yearOfBirth: Double
-    let wand: Wand
-    let patronus: String
-    let alive: Bool
-    let image: String
+    let otherNames: String?
+    let house: String?
+    let yearOfBirth: Double?
+    let wand: Wand?
+    let patronus: String?
+    let alive: Bool?
+    let imageUrl: String?
     
     var characterDescription: String {
         """
-        Other names: \(alternate_names)
-        School house: \(house)
-        Born on: \(yearOfBirth)
-        Wand: \(wand)
-        Patronus: \(patronus)
-        Is alive: \(alive)
+        Other names: \(otherNames ?? "")
+        School house: \(house ?? "")
+        Born on: \(yearOfBirth ?? 0)
+        Patronus: \(patronus ?? "")
+        Is alive: \(alive ?? true)
         """
+//    Wand: \(wand)
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case otherNames = "alternate_names"
+        case house = "house"
+        case yearOfBirth = "yearOfBirth"
+        case wand = "wand"
+        case patronus = "patronus"
+        case alive = "alive"
+        case imageUrl = "image"
     }
 }
 
 struct Wand: Decodable {
-    let wood: String
-    let core: String
-    let length: Double
+    let wood: String?
+    let core: String?
+    let length: Double?
     
     var wandDescription: String {
         """
-        Wood: \(wood)
-        Core: \(core)
-        Lenght: \(length)
+        Wood: \(wood ?? "")
+        Core: \(core ?? "")
+        Lenght: \(length ?? 1)
         """
     }
 }
