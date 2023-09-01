@@ -31,22 +31,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-aX-prV">
-                                            <rect key="frame" x="-3.6666666666666714" y="0.0" width="258.33333333333331" height="128"/>
+                                            <rect key="frame" x="-4" y="0.0" width="259" height="128"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Ka-vep">
-                                                    <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="128"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FXX-1N-HIT">
-                                                    <rect key="frame" x="146.33333333333331" y="36.333333333333343" width="112" height="55.666666666666657"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FXX-1N-HIT">
+                                                    <rect key="frame" x="146.66666666666666" y="36.333333333333343" width="112.33333333333334" height="55.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOl-fc-5GO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="112" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-S8-26Q">
-                                                            <rect key="frame" x="0.0" y="35.333333333333336" width="112" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="35.333333333333336" width="112.33333333333333" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

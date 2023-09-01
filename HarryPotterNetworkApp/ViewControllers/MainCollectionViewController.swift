@@ -38,7 +38,7 @@ class MainCollectionViewController: UICollectionViewController {
     }
 }
 
-//MARK: Private methods
+// MARK: - Private methods
 extension MainCollectionViewController {
     private func fetchCharacters() {
         NetworkManager.shared.fetch([Character].self, from: NetworkManager.shared.link) { [weak self] result in
@@ -51,5 +51,12 @@ extension MainCollectionViewController {
                 print(error)
             }
         }
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: UIScreen.main.bounds.width - 48, height: 200)
     }
 }

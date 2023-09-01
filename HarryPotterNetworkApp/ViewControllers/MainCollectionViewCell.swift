@@ -15,7 +15,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     func configure(with character: Character) {
         characterNameLabel.text = character.name
-        characterDescriptionLabel.text = character.characterDescription
+        characterDescriptionLabel.text = character.house
         
         NetworkManager.shared.fetchImage(from: character.imageUrl) { [weak self] result in
             switch result {

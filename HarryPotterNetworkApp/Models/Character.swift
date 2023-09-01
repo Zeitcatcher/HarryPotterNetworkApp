@@ -23,7 +23,6 @@ struct Character: Decodable {
         Patronus: \(patronus ?? "")
         Is alive: \(alive ?? true)
         """
-//    Wand: \(wand)
     }
     
     enum CodingKeys: String, CodingKey {
