@@ -5,7 +5,7 @@
 //  Created by Arseniy Oksenoyt on 8/31/23.
 //
 
-struct Character: Decodable {
+struct Character: Codable {
     let name: String
     let otherNames: String?
     let house: String?
@@ -13,7 +13,7 @@ struct Character: Decodable {
     let wand: Wand?
     let patronus: String?
     let alive: Bool?
-    let imageUrl: String?
+    let imageURL: String?
     
     var characterDescription: String {
         """
@@ -33,11 +33,11 @@ struct Character: Decodable {
         case wand = "wand"
         case patronus = "patronus"
         case alive = "alive"
-        case imageUrl = "image"
+        case imageURL = "image"
     }
 }
 
-struct Wand: Decodable {
+struct Wand: Codable {
     let wood: String?
     let core: String?
     let length: Double?

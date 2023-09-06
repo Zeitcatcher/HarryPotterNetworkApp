@@ -20,7 +20,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = character.name
         descriptionLabel.text = character.characterDescription
-        wandLabel.text = character.wand?.wandDescription
+//        wandLabel.text = character.wand?.wandDescription
         fetchImage()
     }
     

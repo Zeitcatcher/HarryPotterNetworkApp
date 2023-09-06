@@ -14,7 +14,6 @@ class ListCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCharacters()
-        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,7 +55,6 @@ extension ListCollectionViewController {
             case .success(let characters):
                 self?.characters = characters
                 self?.collectionView.reloadData()
-                print(characters)
             case .failure(let error):
                 print(error)
             }

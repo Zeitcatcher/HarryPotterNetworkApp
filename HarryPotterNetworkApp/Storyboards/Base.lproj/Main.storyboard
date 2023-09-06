@@ -32,22 +32,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-aX-prV">
-                                            <rect key="frame" x="-4.3333333333333286" y="0.0" width="259.66666666666669" height="128"/>
+                                            <rect key="frame" x="-6.3333333333333286" y="0.0" width="263.66666666666669" height="128"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Ka-vep">
-                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="128"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Ka-vep">
+                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="128"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FXX-1N-HIT">
-                                                    <rect key="frame" x="147" y="36.333333333333343" width="112.66666666666669" height="55.666666666666657"/>
+                                                    <rect key="frame" x="149" y="36.333333333333343" width="114.66666666666669" height="55.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOl-fc-5GO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-S8-26Q">
-                                                            <rect key="frame" x="0.0" y="35.333333333333336" width="112.66666666666667" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="35.333333333333336" width="114.66666666666667" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
