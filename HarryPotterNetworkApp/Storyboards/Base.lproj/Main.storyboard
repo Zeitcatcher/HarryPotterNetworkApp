@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Xdw-To-8y3">
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Xdw-To-8y3">
                             <size key="itemSize" width="180" height="270"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -31,39 +31,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXS-Vc-YEO">
-                                            <rect key="frame" x="3" y="3" width="174" height="264"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="174" id="N7c-dN-8Rc"/>
-                                            </constraints>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXS-Vc-YEO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-7X-Feh">
-                                            <rect key="frame" x="3" y="252.66666666666666" width="174" height="14.333333333333343"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="174" id="NiM-6k-Psc"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="767-pV-W0M">
-                                            <rect key="frame" x="3" y="235.33333333333334" width="174" height="14.333333333333343"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="174" id="6fb-Y1-GDZ"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-Oc-1vD">
+                                            <rect key="frame" x="74.666666666666671" y="231.33333333333334" width="31" height="30.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="767-pV-W0M">
+                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="14.333333333333334"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-7X-Feh">
+                                                    <rect key="frame" x="0.0" y="16.333333333333314" width="31" height="14.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Tik-7X-Feh" firstAttribute="leading" secondItem="6fr-fi-Uib" secondAttribute="leading" constant="3" id="9Yp-UD-Zby"/>
-                                        <constraint firstAttribute="bottom" secondItem="Tik-7X-Feh" secondAttribute="bottom" constant="3" id="EyE-wM-OHh"/>
-                                        <constraint firstAttribute="bottom" secondItem="LXS-Vc-YEO" secondAttribute="bottom" constant="3" id="Ij3-cG-yWP"/>
-                                        <constraint firstItem="Tik-7X-Feh" firstAttribute="top" secondItem="767-pV-W0M" secondAttribute="bottom" constant="3" id="M93-r5-HiY"/>
-                                        <constraint firstItem="767-pV-W0M" firstAttribute="leading" secondItem="6fr-fi-Uib" secondAttribute="leading" constant="3" id="Mon-yf-jUs"/>
-                                        <constraint firstItem="LXS-Vc-YEO" firstAttribute="top" secondItem="6fr-fi-Uib" secondAttribute="top" constant="3" id="jaM-6T-GTS"/>
-                                        <constraint firstItem="LXS-Vc-YEO" firstAttribute="leading" secondItem="6fr-fi-Uib" secondAttribute="leading" constant="3" id="x4p-n3-DuV"/>
+                                        <constraint firstItem="LXS-Vc-YEO" firstAttribute="height" secondItem="6fr-fi-Uib" secondAttribute="height" id="8JP-sP-ve6"/>
+                                        <constraint firstItem="LXS-Vc-YEO" firstAttribute="width" secondItem="6fr-fi-Uib" secondAttribute="width" id="H3P-Jq-CUZ"/>
+                                        <constraint firstItem="dGp-Oc-1vD" firstAttribute="centerX" secondItem="6fr-fi-Uib" secondAttribute="centerX" id="Ri8-Dt-9xW"/>
+                                        <constraint firstAttribute="bottom" secondItem="dGp-Oc-1vD" secondAttribute="bottom" constant="8" id="csM-gl-JgT"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="180" height="270"/>
