@@ -21,17 +21,17 @@ class DetailsViewController: UIViewController {
         nameLabel.text = character.name
         descriptionLabel.text = character.characterDescription
 //        wandLabel.text = character.wand?.wandDescription
-        fetchImage()
+//        fetchImage()
     }
     
-    private func fetchImage() {
-        NetworkManager.shared.fetchImage(from: NetworkManager.shared.link) { [weak self] result in
-            switch result {
-            case .success(let imageData):
-                self?.photoImageView.image = UIImage(data: imageData)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+//    private func fetchImage() {
+//        NetworkManager.shared.fetchImage(from: NetworkManager.shared.link) { [weak self] result in
+//            switch result {
+//            case .success(let imageData):
+//                self?.photoImageView.image = UIImage(data: imageData)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
 }

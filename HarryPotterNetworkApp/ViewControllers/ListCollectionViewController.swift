@@ -65,6 +65,6 @@ extension ListCollectionViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ListCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 48, height: 200)
+        CGSize(width: UIScreen.main.bounds.width / 2 - 32, height: 230)
     }
 }

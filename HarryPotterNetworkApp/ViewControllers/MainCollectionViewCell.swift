@@ -9,6 +9,13 @@ import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
     
+    private var imageURL: URL? {
+        didSet {
+            characterImageView.image = nil
+            updateImage()
+        }
+    }
+    
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterDescriptionLabel: UILabel!
@@ -17,16 +24,16 @@ class MainCollectionViewCell: UICollectionViewCell {
         characterNameLabel.text = character.name
         characterDescriptionLabel.text = character.house
         characterImageView.contentMode = .scaleAspectFill
-        characterImageView.image = nil
-        updateImage(from: character)
+        imageURL = URL(string: character.imageURL ?? "")
+        characterImageView.layer.cornerRadius = 50
     }
 }
 
 // MARK: - Private methids
 extension MainCollectionViewCell {
-    private func updateImage(from character: Character) {
-        guard let imageURL = URL(string: character.imageURL ?? "") else { return }
-        getImage(with: character, from: imageURL) { [weak self] result in
+    private func updateImage() {
+        guard let imageURL = imageURL else { return }
+        getImage(from: imageURL) { [weak self] result in
             switch result {
             case .success(let image):
                 self?.characterImageView.image = image
@@ -36,13 +43,13 @@ extension MainCollectionViewCell {
         }
     }
     
-    private func getImage(with character: Character, from url: URL, completion: @escaping(Result<UIImage, Error>) -> Void) {
+    private func getImage(from url: URL, completion: @escaping(Result<UIImage, Error>) -> Void) {
         if let cachedImage = ImageCacheManager.shared.object(forKey: url.lastPathComponent as NSString) {
             print("Image for cache: ", url.lastPathComponent)
             completion(.success(cachedImage))
             return
         }
-        NetworkManager.shared.fetchImage(from: character.imageURL) { result in
+        NetworkManager.shared.fetchImage(from: url) { result in
             switch result {
             case .success(let imageData):
                 guard let uiImage = UIImage(data: imageData) else { return }
